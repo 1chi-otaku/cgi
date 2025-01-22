@@ -136,3 +136,4 @@
 [Wed Jan 22 16:20:41.149912 2025] [core:alert] [pid 4192:tid 1988] [client ::1:58889] I:/cgi/.htaccess: RewriteEngine must be On or Off
 [Wed Jan 22 16:20:44.329015 2025] [core:alert] [pid 4192:tid 1988] [client ::1:58890] I:/cgi/.htaccess: RewriteEngine must be On or Off
 [Wed Jan 22 16:20:44.871112 2025] [core:alert] [pid 4192:tid 1960] [client ::1:58891] I:/cgi/.htaccess: RewriteEngine must be On or Off
+[Wed Jan 22 16:22:11.237948 2025] [core:alert] [pid 4192:tid 1960] [client ::1:58902] I:/cgi/.htaccess: RewriteEngine must be On or Off
