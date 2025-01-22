@@ -1,0 +1,54 @@
+CGI - Common Gateway Interface - Інтерфейс спільного шлюзу -
+набір вимог до веб-сервера щодо підтримки правил запуску
+сторонніх скриптів
+
+1. Встановлюємо веб-сервер, на прикладі Apache 2.4
+ - завантажуємо архів / встановлюємо збірку (XAMPP, OpenServer, Danver тощо)
+ - налаштовуємо CGI - додаємо до виконавчих файлів .py
+  = знаходимо файл конфігурації httpd.conf
+  = знаходимо перелік індексних файлів (~286 рядок)
+      DirectoryIndex index.php index.pl ...
+    додаємо до нього index.py (якщо відсутній)  
+  = у тому ж файлі (для чистого Apache) або у додатковому extra/httpd-vhosts.conf
+    додаємо налаштування віртуального хосту (задаємо нашу папку як корень сайту)
+    <VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot "C:/Users/Lector/source/repos/Server-213/cgi"
+        ServerName cgi213.loc
+        ServerAlias www.cgi213.loc
+        ErrorLog "C:/Users/Lector/source/repos/Server-213/cgi/logs/error.log"
+        CustomLog "C:/Users/Lector/source/repos/Server-213/cgi/logs/access.log" common
+        <Directory "C:/Users/Lector/source/repos/Server-213/cgi">
+            AllowOverride All
+            Options -Indexes +ExecCGI
+            AddHandler cgi-script  .py
+            Require all granted
+        </Directory>
+    </VirtualHost>
+  = переконуємось у тому що створені всі директорії, які зазначені у конфігурації
+     (.../cgi, /cgi/logs/), файли error.log, access.log створювати не треба
+  = зберігаємо всі змінені файли, перезапускаємо Apache (якщо він був запущений)
+     ознакою успіху прийому конфігурації буде поява .log файлів 
+ - Додаємо запис до локального DNS щодо нашого сайту. Для ОС Windows
+    C:\Windows\System32\drivers\etc\hosts
+        127.0.0.1       cgi213.loc
+        ::1             cgi213.loc
+        127.0.0.1       www.cgi213.loc
+        ::1             www.cgi213.loc
+    Зберігаємо зміни (може знадобитись права адміністратора)
+ - Для перевірки 
+  = створюємо файл index.html (Hello, World)
+  = запускаємо браузер та вводимо (з http)
+     http://cgi213.loc
+
+2. Налаштовуємо скрипти для роботи з CGI
+ - всі скрипти починаються з коментаря, у якому зазначається
+    рядок запуску даного скрипту
+     #!C:/Python/Python313/python.exe
+ - скрипт має виводити те, що буде передано серверу. Причому 
+    пакет НТТР повністю формується самим скриптом, сервер тільки 
+    може додати статус (200)
+    Відповідно, формуються заголовки та тіло відповіді
+        print( "Content-Type: text/html" )       # Заголовки, щонайменше Content-Type                        
+        print()                                  # Порожній рядок - відокремлює тіло
+        print( "<h1>Hello, CGI</h1>", end="" )   # Тіло                        
