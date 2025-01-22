@@ -137,3 +137,17 @@
 [Wed Jan 22 16:20:44.329015 2025] [core:alert] [pid 4192:tid 1988] [client ::1:58890] I:/cgi/.htaccess: RewriteEngine must be On or Off
 [Wed Jan 22 16:20:44.871112 2025] [core:alert] [pid 4192:tid 1960] [client ::1:58891] I:/cgi/.htaccess: RewriteEngine must be On or Off
 [Wed Jan 22 16:22:11.237948 2025] [core:alert] [pid 4192:tid 1960] [client ::1:58902] I:/cgi/.htaccess: RewriteEngine must be On or Off
+[Wed Jan 22 17:00:20.948226 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:59347] End of script output before headers: api1.py, referer: http://localhost:8080/
+[Wed Jan 22 17:00:20.948226 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:59347] AH01215: Traceback (most recent call last):\r: I:/cgi/api1.py, referer: http://localhost:8080/
+[Wed Jan 22 17:00:20.948226 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:59347] AH01215:   File "I:\\cgi\\api1.py", line 17, in <module>\r: I:/cgi/api1.py, referer: http://localhost:8080/
+[Wed Jan 22 17:00:20.948226 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:59347] AH01215:     query_string = urllib.parse.unquote(envs['QUERY_STRING'], encoding="utf-8")\r: I:/cgi/api1.py, referer: http://localhost:8080/
+[Wed Jan 22 17:00:20.948226 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:59347] AH01215:                    ^^^^^^\r: I:/cgi/api1.py, referer: http://localhost:8080/
+[Wed Jan 22 17:00:20.948226 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:59347] AH01215: NameError: name 'urllib' is not defined. Did you forget to import 'urllib'?\r: I:/cgi/api1.py, referer: http://localhost:8080/
+[Wed Jan 22 17:42:49.934394 2025] [cgi:error] [pid 4192:tid 1960] [client ::1:58125] AH02811: script not found or unable to stat: I:/New folder (7)/cgi-bin/api, referer: http://localhost:8080/
+[Wed Jan 22 17:42:51.508012 2025] [cgi:error] [pid 4192:tid 1960] [client ::1:58125] AH02811: script not found or unable to stat: I:/New folder (7)/cgi-bin/api1.py, referer: http://localhost:8080/
+[Wed Jan 22 17:42:52.336435 2025] [cgi:error] [pid 4192:tid 1960] [client ::1:58125] AH02811: script not found or unable to stat: I:/New folder (7)/cgi-bin/api1.py, referer: http://localhost:8080/
+[Wed Jan 22 17:42:52.775407 2025] [cgi:error] [pid 4192:tid 1960] [client ::1:58125] AH02811: script not found or unable to stat: I:/New folder (7)/cgi-bin/api, referer: http://localhost:8080/
+[Wed Jan 22 17:42:55.354239 2025] [cgi:error] [pid 4192:tid 1960] [client ::1:58125] AH02811: script not found or unable to stat: I:/New folder (7)/cgi-bin/api1.py, referer: http://localhost:8080/
+[Wed Jan 22 17:43:01.350461 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:58126] AH02811: script not found or unable to stat: I:/New folder (7)/cgi-bin/api, referer: http://localhost:8080/
+[Wed Jan 22 17:58:21.054359 2025] [cgi:error] [pid 4192:tid 1960] [client ::1:58281] Premature end of script headers: api1.py, referer: http://localhost:8080/
+[Wed Jan 22 17:58:22.108443 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:58282] Premature end of script headers: api1.py, referer: http://localhost:8080/
