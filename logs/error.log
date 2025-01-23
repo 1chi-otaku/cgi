@@ -1,0 +1,8 @@
+[Thu Jan 23 16:29:29.855629 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:61987] End of script output before headers: access_manager.py
+[Thu Jan 23 16:29:29.856645 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:61987] AH01215: Traceback (most recent call last):\r: I:/cgi/access_manager.py
+[Thu Jan 23 16:29:29.856645 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:61987] AH01215:   File "I:\\cgi\\access_manager.py", line 70, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 16:29:29.856645 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:61987] AH01215:     from  data.db_context import DbContext\r: I:/cgi/access_manager.py
+[Thu Jan 23 16:29:29.856645 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:61987] AH01215:   File "I:\\cgi\\data\\db_context.py", line 10\r: I:/cgi/access_manager.py
+[Thu Jan 23 16:29:29.856645 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:61987] AH01215:     def test_connection(self):\r: I:/cgi/access_manager.py
+[Thu Jan 23 16:29:29.856645 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:61987] AH01215:                               ^\r: I:/cgi/access_manager.py
+[Thu Jan 23 16:29:29.856645 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:61987] AH01215: IndentationError: unindent does not match any outer indentation level\r: I:/cgi/access_manager.py

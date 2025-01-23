@@ -66,8 +66,15 @@ controller_name = ucfirst(controller) + ucfirst(category) + "Controller"
 
 sys.path.append('./')
 
+
+
+
 import importlib
 from  data.db_context import DbContext
+
+class AmData:
+    def __init__(self):
+        self.db_context =  DbContext()
 
 try :
     controller_module = importlib. import_module( f'controllers.{controller}.{controller_name}')
