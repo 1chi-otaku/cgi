@@ -70,25 +70,15 @@ sys.path.append('./')
 
 
 import importlib
-from  data.db_context import DbContext
+from am_data import AmData
 
-class AmData:
-    def __init__(self):
-        self.db_context =  DbContext()
 
 try :
-    controller_module = importlib. import_module( f'controllers.{controller}.{controller_name}')
+    controller_module = importlib.import_module( f'controllers.{controller}.{controller_name}')
     controller_class = getattr( controller_module, controller_name )
     controller_object = controller_class()
     controller_action = getattr( controller_object, "serve")
-    controller_action({
-        'envs': envs,
-        'path': path,
-        'controller': controller,
-        'category': category,
-        'slug': slug,
-        'db_context': DbContext()
-    })
+    controller_action(AmData(envs, path, controller, category, slug))
   
 except Exception as err :
     send_error( explain=err )

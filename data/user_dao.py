@@ -39,15 +39,20 @@ class UserDao:
         connection.cursor().execute(sql)
         connection.commit()
 
-    def is_login_free(self, login: str) -> bool:
-        conn = self.__db.get_connection()
-        sql = "SELECT COUNT(*) FROM users_access ua WHERE ua.ua_login = %s"
-        with conn.cursor() as cursor:
-            cursor.execute(sql, tuple(login))
-            row = cursor.fetchone()
-        conn.commit()
-        return row[0] == 0
 
+    def get_all_users(self):
+        conn = self.__db.get_connection()
+        sql = "SELECT user_name, user_email FROM users"
+        
+        with conn.cursor() as cursor:
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+
+        users = []
+        for row in rows:
+            users.append(User(name=row[0], email=row[1], password='')) 
+
+        return users
 
     def add_user(self, user: User):
         conn = self.__db.get_connection()

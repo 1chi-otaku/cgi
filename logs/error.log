@@ -6,3 +6,70 @@
 [Thu Jan 23 16:29:29.856645 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:61987] AH01215:     def test_connection(self):\r: I:/cgi/access_manager.py
 [Thu Jan 23 16:29:29.856645 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:61987] AH01215:                               ^\r: I:/cgi/access_manager.py
 [Thu Jan 23 16:29:29.856645 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:61987] AH01215: IndentationError: unindent does not match any outer indentation level\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:24.348666 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63451] End of script output before headers: access_manager.py
+[Thu Jan 23 18:29:24.348666 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63451] AH01215: Traceback (most recent call last):\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:24.348666 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63451] AH01215:   File "I:\\cgi\\access_manager.py", line 73, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:24.348666 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63451] AH01215:     from am_data import AmData\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:24.348666 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63451] AH01215:   File "I:\\cgi\\am_data.py", line 1, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:24.348666 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63451] AH01215:     from  data.db_context import DbContext\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:24.348666 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63451] AH01215:   File "I:\\cgi\\data\\db_context.py", line 2, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:24.349669 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63451] AH01215:     from data.user_dao import UserDao\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:24.349669 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63451] AH01215:   File "I:\\cgi\\data\\user_dao.py", line 48\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:24.349669 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63451] AH01215:     conn.commit()\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:24.349669 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63451] AH01215:     ^^^^\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:24.349669 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63451] AH01215: IndentationError: expected an indented block after 'with' statement on line 46\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:28.769540 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63460] End of script output before headers: access_manager.py
+[Thu Jan 23 18:29:28.769540 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63460] AH01215: Traceback (most recent call last):\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:28.769540 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63460] AH01215:   File "I:\\cgi\\access_manager.py", line 73, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:28.769540 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63460] AH01215:     from am_data import AmData\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:28.769540 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63460] AH01215:   File "I:\\cgi\\am_data.py", line 1, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:28.770540 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63460] AH01215:     from  data.db_context import DbContext\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:28.770540 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63460] AH01215:   File "I:\\cgi\\data\\db_context.py", line 2, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:28.770540 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63460] AH01215:     from data.user_dao import UserDao\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:28.770540 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63460] AH01215:   File "I:\\cgi\\data\\user_dao.py", line 48\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:28.770540 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63460] AH01215:     conn.commit()\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:28.770540 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63460] AH01215:     ^^^^\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:28.770540 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63460] AH01215: IndentationError: expected an indented block after 'with' statement on line 46\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:29.220588 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63461] End of script output before headers: access_manager.py
+[Thu Jan 23 18:29:29.221597 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63461] AH01215: Traceback (most recent call last):\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:29.221597 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63461] AH01215:   File "I:\\cgi\\access_manager.py", line 73, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:29.221597 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63461] AH01215:     from am_data import AmData\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:29.221597 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63461] AH01215:   File "I:\\cgi\\am_data.py", line 1, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:29.221597 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63461] AH01215:     from  data.db_context import DbContext\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:29.221597 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63461] AH01215:   File "I:\\cgi\\data\\db_context.py", line 2, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:29.221597 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63461] AH01215:     from data.user_dao import UserDao\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:29.221597 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63461] AH01215:   File "I:\\cgi\\data\\user_dao.py", line 48\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:29.221597 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63461] AH01215:     conn.commit()\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:29.221597 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63461] AH01215:     ^^^^\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:29.221597 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63461] AH01215: IndentationError: expected an indented block after 'with' statement on line 46\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:31.284295 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63463] End of script output before headers: access_manager.py
+[Thu Jan 23 18:29:31.284295 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63463] AH01215: Traceback (most recent call last):\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:31.284295 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63463] AH01215:   File "I:\\cgi\\access_manager.py", line 73, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:31.284295 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63463] AH01215:     from am_data import AmData\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:31.284295 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63463] AH01215:   File "I:\\cgi\\am_data.py", line 1, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:31.284295 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63463] AH01215:     from  data.db_context import DbContext\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:31.284295 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63463] AH01215:   File "I:\\cgi\\data\\db_context.py", line 2, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:31.285295 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63463] AH01215:     from data.user_dao import UserDao\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:31.285295 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63463] AH01215:   File "I:\\cgi\\data\\user_dao.py", line 48\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:31.285295 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63463] AH01215:     conn.commit()\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:31.285295 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63463] AH01215:     ^^^^\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:31.285295 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63463] AH01215: IndentationError: expected an indented block after 'with' statement on line 46\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:32.827816 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63464] End of script output before headers: access_manager.py
+[Thu Jan 23 18:29:32.827816 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63464] AH01215: Traceback (most recent call last):\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:32.827816 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63464] AH01215:   File "I:\\cgi\\access_manager.py", line 73, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:32.827816 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63464] AH01215:     from am_data import AmData\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:32.827816 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63464] AH01215:   File "I:\\cgi\\am_data.py", line 1, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:32.827816 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63464] AH01215:     from  data.db_context import DbContext\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:32.827816 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63464] AH01215:   File "I:\\cgi\\data\\db_context.py", line 2, in <module>\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:32.827816 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63464] AH01215:     from data.user_dao import UserDao\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:32.827816 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63464] AH01215:   File "I:\\cgi\\data\\user_dao.py", line 48\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:32.827816 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63464] AH01215:     conn.commit()\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:32.827816 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63464] AH01215:     ^^^^\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:29:32.827816 2025] [cgi:error] [pid 4192:tid 1988] [client ::1:63464] AH01215: IndentationError: expected an indented block after 'with' statement on line 46\r: I:/cgi/access_manager.py
+[Thu Jan 23 18:33:16.746830 2025] [http:error] [pid 4192:tid 1956] [client ::1:63599] AH02429: Response header name 'Database error' contains invalid characters, aborting request
+[Thu Jan 23 18:33:30.515111 2025] [http:error] [pid 4192:tid 1956] [client ::1:63610] AH02429: Response header name 'Database error' contains invalid characters, aborting request
+[Thu Jan 23 18:36:15.393695 2025] [http:error] [pid 4192:tid 1956] [client ::1:63741] AH02429: Response header name 'Error while checking login' contains invalid characters, aborting request
+[Thu Jan 23 18:40:45.887883 2025] [http:error] [pid 4192:tid 1956] [client ::1:63890] AH02429: Response header name 'Error while checking login' contains invalid characters, aborting request
+[Thu Jan 23 18:42:59.676224 2025] [http:error] [pid 4192:tid 1956] [client ::1:63965] AH02429: Response header name 'Error while checking login' contains invalid characters, aborting request
+[Thu Jan 23 18:49:47.172535 2025] [http:error] [pid 4192:tid 1956] [client ::1:64229] AH02429: Response header name 'Error connecting to database' contains invalid characters, aborting request
+[Thu Jan 23 18:50:50.111777 2025] [http:error] [pid 4192:tid 1956] [client ::1:64268] AH02429: Response header name 'Error connecting to database' contains invalid characters, aborting request

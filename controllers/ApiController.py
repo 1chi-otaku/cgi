@@ -1,4 +1,5 @@
 import json
+from am_data import AmData
 from models.RestModel import *
 class ApiController:
 
@@ -24,9 +25,9 @@ class ApiController:
         exit()
 
 
-    def serve(self, access_manager_data):
+    def serve(self, access_manager_data: AmData):
         self.access_manager_data = access_manager_data
-        method = access_manager_data["envs"]["REQUEST_METHOD"]
+        method = access_manager_data.envs["REQUEST_METHOD"]
         self.response.meta.add('method',method)
         action_name = f"do_{method.lower()}"
         controller_action = getattr( self, action_name, None)

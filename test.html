@@ -53,14 +53,16 @@
 
 
        function testPost() {
+        const userName = 'Name_' + generateRandomString(6);
+        const userEmail = 'user_' + generateRandomString(6) + '@i.ua';
         fetch("http://cgi213.loc:8080/user/", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                'user-name': 'Петрович',
-                'user-email': 'user@i.ua',
+                'user-name': userName,
+                'user-email': userEmail,
                 'user-password': '123'
             })
         })
@@ -145,6 +147,15 @@
                 },
                 body: '<p>This is unsupported content</p>'
             });
+        }
+
+        function generateRandomString(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
         }
 
 

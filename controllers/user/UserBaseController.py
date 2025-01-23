@@ -14,7 +14,7 @@ class UserBaseController( ApiController):
         return {'user' : 'works'}
     
     def do_post(self): # Signup
-        db_context = self.access_manager_data['db_context']
+        db_context = self.access_manager_data.db_context
         user_dao = db_context.user_dao
         body = sys.stdin.read()
         if len(body) < 3:
@@ -32,11 +32,10 @@ class UserBaseController( ApiController):
         except:
             self.end_with(422, "Body must have props: user-name, user-email, user-password")
 
-        
+
+        user_dao.add_user( user )
             
-        return {'post' : body,
-                'db': db_context.test_connection(),
-                'user': user}
+        return "Created"
 
 
     
