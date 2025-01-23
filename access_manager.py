@@ -5,19 +5,19 @@
 
 import sys
 import codecs
+import json
 
 
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 sys.stdin = codecs.getreader("utf-8")(sys.stdin.detach())
 
 
-import json
 def send_error(code=400, phrase="Bad Request", explain=None):
     print(f"Status: {code} {phrase}")
     print("Access-Control-Allow-Origin: *")
     print("Content-Type: text/plain; charset=utf-8")
     print()
-    print(explain if explain else phrase)
+    print(explain if explain != None else phrase, end='')
     exit()
 
 def send_file( filename:str ) :
@@ -67,6 +67,7 @@ controller_name = ucfirst(controller) + ucfirst(category) + "Controller"
 sys.path.append('./')
 
 import importlib
+from  data.db_context import DbContext
 
 try :
     controller_module = importlib. import_module( f'controllers.{controller}.{controller_name}')
@@ -78,7 +79,8 @@ try :
         'path': path,
         'controller': controller,
         'category': category,
-        'slug': slug
+        'slug': slug,
+        'db_context': DbContext()
     })
   
 except Exception as err :

@@ -4,19 +4,13 @@ class RestModel:
         self.meta = meta if isinstance(meta, RestMeta) else RestMeta(meta)
         self.data = data
 
-    def __dict__(self):
+    def to_json(self):
         return{
-            'status': self.status.__dict__(),
-            'meta': self.meta.__dict__(),
+            'status': self.status.to_json(),
+            'meta': self.meta.to_json(),
             'data': self.data
         }
     
-    def to_json(self):
-        return {
-            "status": self.status.to_json(),
-            "meta": self.meta.to_json(),
-            "data": self.data
-        }
 
 class RestStatus:
     def __init__(self,
@@ -27,19 +21,14 @@ class RestStatus:
         self.reasonPhrase = reason_phrase if reason_phrase is not None else self.phrase_by_code(status_code)
         self.isSuccess = is_success if is_success is not None else status_code < 400
 
-    def __dict__(self):
+    def to_json(self):
         return{
             'statusCode': self.statusCode,
             'reasonPhrase': self.reasonPhrase,
             'isSuccess': self.isSuccess
         }
     
-    def to_json(self):
-        return {
-            'statusCode': self.statusCode,
-            'reasonPhrase': self.reasonPhrase,
-            'isSuccess': self.isSuccess
-        }
+
 
     def phrase_by_code(self, status_code: int) -> str:
         match status_code:
@@ -59,7 +48,10 @@ class RestMeta:
     def __init__(self, meta=None):
         self.meta = meta
 
-    def __dict__(self):
+    def to_json(self):
         return self.meta
+    
+    def add(self, k,v):
+        self.meta[k] = v
 
 
