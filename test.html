@@ -51,14 +51,35 @@
             .then(j => out.innerText = JSON.stringify(j,null,2));
         }
 
-        function testPost(){
-            fetch("http://cgi213.loc:8080/user/",{
-                method: 'POST'
+
+       function testPost() {
+        fetch("http://cgi213.loc:8080/user/", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                'user-name': 'Петрович',
+                'user-email': 'user@i.ua',
+                'user-password': '123'
             })
-            .then(r => r.json())
-            .then(j => out.innerText = JSON.stringify(j,null,2));
-           
-        }
+        })
+        .then(r => {
+            if (!r.ok) {
+                return r.json().then(err => {
+                    throw new Error(err.details || "Unknown error");
+                });
+            }
+            return r.json();
+        })
+        .then(j => {
+            document.getElementById("out").innerText = JSON.stringify(j, null, 2);
+        })
+        .catch(error => {
+            document.getElementById("out").innerText = `Error: ${error.message}`;
+        });
+    }
+
 
         function displayResponse(response, responseText) {
             const output = document.getElementById('output');

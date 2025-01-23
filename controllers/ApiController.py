@@ -34,3 +34,12 @@ class ApiController:
             self.end_with(405, f"Method {method} not supported in requested endpoint")
         else:
             self.end_with(data =controller_action())
+    
+    def do_options(self):
+        '''CORS/CORP - info about supported items'''
+        print("Access-Control-Allow-Origin: *")
+        print("Access-Control-Allow-Methods: GET, POST, PUT, DELETE")
+        print("Access-Control-Allow-Headers: content-type")
+        print()
+        exit()
+

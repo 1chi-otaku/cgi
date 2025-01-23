@@ -15,7 +15,7 @@ sys.stdin = codecs.getreader("utf-8")(sys.stdin.detach())
 def send_error(code=400, phrase="Bad Request", explain=None):
     print(f"Status: {code} {phrase}")
     print("Access-Control-Allow-Origin: *")
-    print("Content-Type: text/plain; charset=utf-8")
+    print("Content-Type: application/json; charset=utf-8")
     print()
     print(explain if explain != None else phrase, end='')
     exit()

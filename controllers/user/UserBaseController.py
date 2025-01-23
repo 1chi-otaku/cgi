@@ -1,5 +1,6 @@
 #!C:/Users/1chi/AppData/Local/Microsoft/WindowsApps/python.exe
 from  controllers.ApiController import ApiController
+import sys
 class UserBaseController( ApiController):
     
     def __init__(self):
@@ -12,8 +13,10 @@ class UserBaseController( ApiController):
     
     def do_post(self): # Signup
         self.db_context = self.access_manager_data['db_context']
-        return {'post' : 'works'}
-        #return {'db': self.db_context.test_connection()}
+        body = sys.stdin.read()
+        return {'post' : body,
+                'db': self.db_context.test_connection()}
+
 
     
     
