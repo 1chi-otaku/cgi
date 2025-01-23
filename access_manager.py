@@ -27,12 +27,7 @@ def send_file( filename:str ) :
         print( file.read() )
     exit()
 
-def send_json( data ) :
-    print("Content-Type: application/json; charset=utf-8")
-    print()
-    print(json.dumps(data))
-    exit()
-    
+
 def ucfirst( input:str ) :
     if len( input ) == 0 : return input
     if len( input ) == 1 : return input[0].upper()
@@ -68,7 +63,6 @@ slug = parts[2] if len(parts) > 2 else None
 controller_name = ucfirst(controller) + ucfirst(category) + "Controller"
 
 
-action_name = f"do_{envs["REQUEST_METHOD"].lower()}"
 
 sys.path.append('./')
 
@@ -78,15 +72,19 @@ try :
     controller_module = importlib. import_module( f'controllers.{controller}.{controller_name}')
     controller_class = getattr( controller_module, controller_name )
     controller_object = controller_class()
+    controller_action = getattr( controller_object, "serve")
+    controller_action({
+        'envs': envs,
+        'path': path,
+        'controller': controller,
+        'category': category,
+        'slug': slug
+    })
   
 except Exception as err :
     send_error( explain=err )
 
-controller_action = getattr( controller_object, action_name, None)
-if controller_action == None:
-    send_error(405, "Methond Not Allowed", f"Method {envs["REQUEST_METHOD"]} not supported in requested endpoint")
-else:
-    send_json(controller_action())
+
 
 
 
